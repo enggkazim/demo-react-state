@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import './Room.css';
 
 function Room() {
 
@@ -10,10 +11,11 @@ function Room() {
         console.log("Clicked");
         setLit(!isLit);
     }
+
     return (
-    <div>
+    <div className={`room ${isLit? "lit": "dark"}`}>
         
-        This is room is {isLit? "Lit": "Dark"}
+        This is room is {isLit? "lit": "dark"}
         <br/>
         age is {age}
         <br/>
